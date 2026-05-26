@@ -48,34 +48,32 @@ Parámetros usados (comunes a todos los modelos): `ep=20`, `bs=16`, `lr=8.516e-5
 
 ### Distemist
 
-Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de test. El tiempo medio por archivo es `tiempo_total_del_ensemble / 250` y el tiempo por modelo en el ensemble es `tiempo_total_del_ensemble / número_de_modelos_del_ensemble`.
+Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de test. El tiempo total corresponde a la suma de todos los ensembles; el tiempo por modelo en el ensemble es `tiempo_total_del_ensemble / número_de_modelos_del_ensemble` y el tiempo medio por archivo es `tiempo_por_modelo_en_el_ensemble / 250`.
 
 | Tarea | Notebook | Modelo base | Parámetros | Folds x seeds (=ensemble) | Precision | Recall | F-score | Tiempo medio/archivo (test) | Tiempo por modelo en el ensemble | Tiempo total del ensemble |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
-| Distemist | `bsc-bio-ehr-es_7940.ipynb` | `PlanTL-GOB-ES/bsc-bio-ehr-es` | ~125M | 5 x 2 = 10 | 0.8088 | 0.7798 | 0.7940 | 2.1 s | 53.7 s | 537.4 s |
-| Distemist | `lcampillos_7965.ipynb` | `lcampillos/roberta-es-clinical-trials-ner` | ~125M | 5 x 2 = 10 | 0.8159 | 0.7779 | 0.7965 | 2.2 s | 55.5 s | 554.9 s |
-| Distemist | `rigoberta_7756.ipynb` | `IIC/RigoBERTa-2.0` | ~560M | 3 x 1 = 3 | 0.8058 | 0.7475 | 0.7756 | 1.1 s | 95.5 s | 286.4 s |
-| Distemist | `xlm-roberta_7626.ipynb` | `FacebookAI/xlm-roberta-large` | ~560M | 3 x 1 = 3 | 0.8018 | 0.7271 | 0.7626 | 1.2 s | 96.8 s | 290.3 s |
-| Distemist | `rigoberta-clinical_7650.ipynb` | `IIC/RigoBERTa-Clinical` | ~560M | 3 x 1 = 3 | 0.8037 | 0.7298 | 0.7650 | 1.2 s | 102.9 s | 308.8 s |
+| Distemist | `bsc-bio-ehr-es_7940.ipynb` | `PlanTL-GOB-ES/bsc-bio-ehr-es` | ~125M | 5 x 2 = 10 | 0.8088 | 0.7798 | 0.7940 | 0.21 s | 53.7 s | 537.4 s |
+| Distemist | `lcampillos_7965.ipynb` | `lcampillos/roberta-es-clinical-trials-ner` | ~125M | 5 x 2 = 10 | 0.8159 | 0.7779 | 0.7965 | 0.22 s | 55.5 s | 554.9 s |
+| Distemist | `rigoberta_7756.ipynb` | `IIC/RigoBERTa-2.0` | ~560M | 3 x 1 = 3 | 0.8058 | 0.7475 | 0.7756 | 0.38 s | 95.5 s | 286.4 s |
+| Distemist | `xlm-roberta_7626.ipynb` | `FacebookAI/xlm-roberta-large` | ~560M | 3 x 1 = 3 | 0.8018 | 0.7271 | 0.7626 | 0.39 s | 96.8 s | 290.3 s |
+| Distemist | `rigoberta-clinical_7650.ipynb` | `IIC/RigoBERTa-Clinical` | ~560M | 3 x 1 = 3 | 0.8037 | 0.7298 | 0.7650 | 0.41 s | 102.9 s | 308.8 s |
 
 ### Proctemist
 
-Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de test. El tiempo medio por archivo es `tiempo_total_del_ensemble / 250` y el tiempo por modelo en el ensemble es `tiempo_total_del_ensemble / número_de_modelos_del_ensemble`.
-
 | Tarea | Notebook | Modelo base | Parámetros | Folds x seeds (=ensemble) | Precision | Recall | F-score | Tiempo medio/archivo (test) | Tiempo por modelo en el ensemble | Tiempo total del ensemble |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|
-| Proctemist | `lcampillos_8014.ipynb` | `lcampillos/roberta-es-clinical-trials-ner` | ~125M | 5 x 2 = 10 | 0.8026 | 0.8002 | 0.8014 | 2.2 s | 53.9 s | 538.7 s |
-| Proctemist | `bsc-bio-ehr-es_8048.ipynb` | `PlanTL-GOB-ES/bsc-bio-ehr-es` | ~125M | 5 x 2 = 10 | 0.8157 | 0.7941 | 0.8048 | 2.1 s | 52.8 s | 527.6 s |
-| Proctemist | `rigoberta_7896.ipynb` | `IIC/RigoBERTa-2.0` | ~560M | 3 x 1 = 3 | 0.8105 | 0.7698 | 0.7896 | 1.2 s | 97.1 s | 291.4 s |
-| Proctemist | `rigoberta-clinical_7928.ipynb` | `IIC/RigoBERTa-Clinical` | ~560M | 3 x 1 = 3 | 0.8125 | 0.7739 | 0.7928 | 1.2 s | 97.8 s | 293.5 s |
-| Proctemist | `xlm-roberta_7822.ipynb` | `FacebookAI/xlm-roberta-large` | ~560M | 3 x 1 = 3 | 0.8037 | 0.7617 | 0.7822 | 1.1 s | 95.7 s | 287.1 s |
+| Proctemist | `lcampillos_8014.ipynb` | `lcampillos/roberta-es-clinical-trials-ner` | ~125M | 5 x 2 = 10 | 0.8026 | 0.8002 | 0.8014 | 0.22 s | 53.9 s | 538.7 s |
+| Proctemist | `bsc-bio-ehr-es_8048.ipynb` | `PlanTL-GOB-ES/bsc-bio-ehr-es` | ~125M | 5 x 2 = 10 | 0.8157 | 0.7941 | 0.8048 | 0.21 s | 52.8 s | 527.6 s |
+| Proctemist | `rigoberta_7896.ipynb` | `IIC/RigoBERTa-2.0` | ~560M | 3 x 1 = 3 | 0.8105 | 0.7698 | 0.7896 | 0.39 s | 97.1 s | 291.4 s |
+| Proctemist | `rigoberta-clinical_7928.ipynb` | `IIC/RigoBERTa-Clinical` | ~560M | 3 x 1 = 3 | 0.8125 | 0.7739 | 0.7928 | 0.39 s | 97.8 s | 293.5 s |
+| Proctemist | `xlm-roberta_7822.ipynb` | `FacebookAI/xlm-roberta-large` | ~560M | 3 x 1 = 3 | 0.8037 | 0.7617 | 0.7822 | 0.38 s | 95.7 s | 287.1 s |
 
 ## Referencia competiciones
 
 Como referencia oficial:
 
 - Ganador Distemist: **0,777** de F-score.
-- Ganador MedProcNER: **0,798** de F-score.
+- Ganador Proctemist: **0,798** de F-score.
 
 Enlaces:
 
