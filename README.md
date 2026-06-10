@@ -60,7 +60,7 @@ Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de t
 
 ### Decoders
 
-Todos los modelos decoder se entrenaron con **QLoRA** (4-bit, LoRA r=64, alpha=128) usando la librería `unsloth`. Parámetros comunes: `ep=2`, `MAX_SEQ_LENGTH=4096`, `MAX_NEW_TOKENS=300`. La inferencia se realiza sobre los mismos 250 archivos del conjunto de test de Distemist. Los tiempos son directamente el tiempo medio por archivo (el paradigma generativo no usa ensemble).
+Todos los modelos decoder se entrenaron con **QLoRA** (4-bit, LoRA r=64, alpha=128) usando la librería `unsloth`. Parámetros comunes: `ep=2`, `MAX_SEQ_LENGTH=4096`, `MAX_NEW_TOKENS=300`. La inferencia se realiza sobre los mismos 250 archivos del conjunto de test. Los tiempos son directamente el tiempo medio por archivo (el paradigma generativo no usa ensemble).
 
 #### Distemist (decoders)
 
@@ -72,6 +72,17 @@ Todos los modelos decoder se entrenaron con **QLoRA** (4-bit, LoRA r=64, alpha=1
 | Distemist | `Qwen3-8B_75_98_.ipynb` | `Qwen/Qwen3-8B` | ~5.2B | 0.7739 | 0.7461 | 0.7598 | 18.96 s |
 | Distemist | `mistral-7b-instruct_75_69_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | ~3.8B | 0.7663 | 0.7477 | 0.7569 | 17.30 s |
 | Distemist | `salamandra-7b-instruct_71_76_.ipynb` | `BSC-LT/salamandra-7b-instruct` | ~4.9B | 0.6940 | 0.7429 | 0.7176 | 12.77 s |
+
+#### Proctemist (decoders)
+
+| Tarea | Notebook | Modelo base | Parámetros totales | Precision | Recall | F-score | Tiempo medio/archivo (test) |
+|---|---|---|---:|---:|---:|---:|---:|
+| Proctemist | `Ministral-3-8B-Instruct-2512_79_05_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | ~5.4B | 0.7839 | 0.7971 | 0.7905 | 48.23 s |
+| Proctemist | `Meta-Llama-3_1-8B-Instruct_78_22_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | ~4.5B | 0.7858 | 0.7786 | 0.7822 | 15.28 s |
+| Proctemist | `BioMistral-7B-DARE_77_99_.ipynb` | `BioMistral/BioMistral-7B-DARE` | ~3.8B | 0.7823 | 0.7775 | 0.7799 | 16.14 s |
+| Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | ~5.2B | 0.7760 | 0.7700 | 0.7730 | 19.36 s |
+| Proctemist | `Mistral-7b-instruct-v0_3_77_17_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | ~3.8B | 0.7514 | 0.7930 | 0.7717 | 17.68 s |
+| Proctemist | `salamandra-7b-instruct_75_47_.ipynb` | `BSC-LT/salamandra-7b-instruct` | ~4.9B | 0.7440 | 0.7656 | 0.7547 | 14.33 s |
 
 ## Referencia competiciones
 Como referencia oficial:
