@@ -68,23 +68,23 @@ Los **parámetros totales** corresponden al conteo del modelo base cargado en 4-
 
 | Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | Tiempo medio/archivo (test) |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Distemist | `ministral-3-8b-instruct-sft_79_25_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 5,403,199,488 | 215,613,440 (3.84%) | 0.8090 | 0.7766 | 0.7925 | 22.63 s |
-| Distemist | `BioMistral-7B-Dare_77_03_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 3,752,071,168 | 167,772,160 (4.28%) | 0.7848 | 0.7564 | 0.7703 | 13.99 s |
-| Distemist | `Meta-Llama-3_1-8B-Instruct_76_18_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 4,540,600,320 | 167,772,160 (3.56%) | 0.7835 | 0.7412 | 0.7618 | 14.02 s |
-| Distemist | `Qwen3-8B_75_98_.ipynb` | `Qwen/Qwen3-8B` | 5,191,808,000 | 174,587,904 (3.25%) | 0.7739 | 0.7461 | 0.7598 | 18.96 s |
-| Distemist | `mistral-7b-instruct_75_69_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 3,758,362,624 | 167,772,160 (4.27%) | 0.7663 | 0.7477 | 0.7569 | 17.30 s |
-| Distemist | `salamandra-7b-instruct_71_76_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 4,932,767,744 | 147,324,928 (2.90%) | 0.6940 | 0.7429 | 0.7176 | 12.77 s |
+| Distemist | `ministral-3-8b-instruct-sft_79_25_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.8090 | 0.7766 | 0.7925 | 22.63 s |
+| Distemist | `BioMistral-7B-Dare_77_03_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7848 | 0.7564 | 0.7703 | 13.99 s |
+| Distemist | `Meta-Llama-3_1-8B-Instruct_76_18_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7835 | 0.7412 | 0.7618 | 14.02 s |
+| Distemist | `Qwen3-8B_75_98_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7739 | 0.7461 | 0.7598 | 18.96 s |
+| Distemist | `mistral-7b-instruct_75_69_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7663 | 0.7477 | 0.7569 | 17.30 s |
+| Distemist | `salamandra-7b-instruct_71_76_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.6940 | 0.7429 | 0.7176 | 12.77 s |
 
 #### Proctemist (decoders)
 
 | Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | Tiempo medio/archivo (test) |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Proctemist | `Ministral-3-8B-Instruct-2512_79_05_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 5,403,199,488 | 215,613,440 (3.84%) | 0.7839 | 0.7971 | 0.7905 | 48.23 s |
-| Proctemist | `Meta-Llama-3_1-8B-Instruct_78_22_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 4,540,600,320 | 167,772,160 (3.56%) | 0.7858 | 0.7786 | 0.7822 | 15.28 s |
-| Proctemist | `BioMistral-7B-DARE_77_99_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 3,752,071,168 | 167,772,160 (4.28%) | 0.7823 | 0.7775 | 0.7799 | 16.14 s |
-| Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | 5,191,808,000 | 174,587,904 (3.25%) | 0.7760 | 0.7700 | 0.7730 | 19.36 s |
-| Proctemist | `Mistral-7b-instruct-v0_3_77_17_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 3,758,362,624 | 167,772,160 (4.27%) | 0.7514 | 0.7930 | 0.7717 | 17.68 s |
-| Proctemist | `salamandra-7b-instruct_75_47_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 4,932,767,744 | 147,324,928 (2.90%) | 0.7440 | 0.7656 | 0.7547 | 14.33 s |
+| Proctemist | `Ministral-3-8B-Instruct-2512_79_05_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.7839 | 0.7971 | 0.7905 | 48.23 s |
+| Proctemist | `Meta-Llama-3_1-8B-Instruct_78_22_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7858 | 0.7786 | 0.7822 | 15.28 s |
+| Proctemist | `BioMistral-7B-DARE_77_99_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7823 | 0.7775 | 0.7799 | 16.14 s |
+| Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7760 | 0.7700 | 0.7730 | 19.36 s |
+| Proctemist | `Mistral-7b-instruct-v0_3_77_17_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7514 | 0.7930 | 0.7717 | 17.68 s |
+| Proctemist | `salamandra-7b-instruct_75_47_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.7440 | 0.7656 | 0.7547 | 14.33 s |
 
 ## Referencia competiciones
 Como referencia oficial:
