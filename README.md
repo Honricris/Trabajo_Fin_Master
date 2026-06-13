@@ -66,14 +66,18 @@ Los **parámetros totales** corresponden al conteo del modelo base cargado en 4-
 
 #### Distemist (decoders)
 
-| Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | Tiempo medio/archivo (test) |
-|---|---|---|---:|---:|---:|---:|---:|---:|
-| Distemist | `ministral-3-8b-instruct-sft_79_25_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.8090 | 0.7766 | 0.7925 | 22.63 s |
-| Distemist | `BioMistral-7B-Dare_77_03_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7848 | 0.7564 | 0.7703 | 13.99 s |
-| Distemist | `Meta-Llama-3_1-8B-Instruct_76_18_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7835 | 0.7412 | 0.7618 | 14.02 s |
-| Distemist | `Qwen3-8B_75_98_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7739 | 0.7461 | 0.7598 | 18.96 s |
-| Distemist | `mistral-7b-instruct_75_69_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7663 | 0.7477 | 0.7569 | 17.30 s |
-| Distemist | `salamandra-7b-instruct_71_76_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.6940 | 0.7429 | 0.7176 | 12.77 s |
+Las columnas `F1 0-shot` y `F1 5-shot` corresponden al mismo modelo evaluado sin entrenamiento (mismo formato de prompt e inferencia, sin QLoRA), en zero-shot y con 5 ejemplos en el prompt respectivamente. `ΔF1` es la ganancia del ajuste fino con QLoRA respecto al mejor de los dos baselines (5-shot).
+
+| Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | F1 0-shot | F1 5-shot | ΔF1 | Tiempo medio/archivo (test) |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Distemist | `ministral-3-8b-instruct-sft_79_25_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.8090 | 0.7766 | 0.7925 | 0.3934 | 0.4335 | +0.3590 | 22.63 s |
+| Distemist | `BioMistral-7B-Dare_77_03_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7848 | 0.7564 | 0.7703 | 0.0970 | 0.1949 | +0.5754 | 13.99 s |
+| Distemist | `Meta-Llama-3_1-8B-Instruct_76_18_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7835 | 0.7412 | 0.7618 | 0.2787 | 0.3620 | +0.3998 | 14.02 s |
+| Distemist | `Qwen3-8B_75_98_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7739 | 0.7461 | 0.7598 | 0.3013 | 0.2937 | +0.4661 | 18.96 s |
+| Distemist | `mistral-7b-instruct_75_69_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7663 | 0.7477 | 0.7569 | 0.2911 | 0.2175 | +0.5394 | 17.30 s |
+| Distemist | `salamandra-7b-instruct_71_76_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.6940 | 0.7429 | 0.7176 | 0.2093 | 0.1948 | +0.5228 | 12.77 s |
+
+Como referencia adicional, `gpt-4.1-mini` (vía API de OpenAI, sin ningún ajuste) obtiene un F1 estricto de 0.4803 en zero-shot y 0.5177 con 5-shot en Distemist: por encima de todos los decoders open-source en ambos escenarios sin entrenar, pero por debajo de cualquiera de los modelos anteriores tras el ajuste fino con QLoRA.
 
 #### Proctemist (decoders)
 
@@ -85,6 +89,8 @@ Los **parámetros totales** corresponden al conteo del modelo base cargado en 4-
 | Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7760 | 0.7700 | 0.7730 | 19.36 s |
 | Proctemist | `Mistral-7b-instruct-v0_3_77_17_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7514 | 0.7930 | 0.7717 | 17.68 s |
 | Proctemist | `salamandra-7b-instruct_75_47_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.7440 | 0.7656 | 0.7547 | 14.33 s |
+
+---
 
 ## Referencia competiciones
 Como referencia oficial:
