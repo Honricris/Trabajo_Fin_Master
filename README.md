@@ -34,7 +34,7 @@ Donde `ner_tags` sigue codificación BIO por etiqueta de tarea (p. ej. `B-`, `I-
 
 ### Encoders
 
-Parámetros usados (comunes a todos los modelos): `ep=20`, `bs=16`, `lr=8.516e-5`, `drop=0.1`, `wd=0.1844`, `warmup=0.1`, `vote=0.5`.
+Hiperparámetros usados (comunes a todos los modelos): `ep=20`, `bs=16`, `lr=8.516e-5`, `drop=0.1`, `wd=0.1844`, `warmup=0.1`, `vote=0.5`.
 
 #### Distemist (encoders)
 Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de test. El tiempo total corresponde a la suma de todos los ensembles; el tiempo por modelo en el ensemble es `tiempo_total_del_ensemble / número_de_modelos_del_ensemble` y el tiempo medio por archivo es `tiempo_por_modelo_en_el_ensemble / 250`.
@@ -60,7 +60,7 @@ Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de t
 
 ### Decoders
 
-Todos los modelos decoder se entrenaron con **QLoRA** (4-bit, LoRA r=64, alpha=128) usando la librería `unsloth`. Parámetros comunes: `ep=2`, `MAX_SEQ_LENGTH=4096`, `MAX_NEW_TOKENS=300`. La inferencia se realiza sobre los mismos 250 archivos del conjunto de test. Los tiempos son directamente el tiempo medio por archivo (el paradigma generativo no usa ensemble).
+Todos los modelos decoder se entrenaron con **QLoRA** (4-bit) usando la librería `unsloth`. Hiperparámetros comunes: `LoRA r=64`, `LoRA alpha=128`, `LoRA dropout=0`, `target_modules="all-linear"`, `epochs=2`, `batch_size=1`, `gradient_accumulation_steps=32` (batch efectivo=32), `learning_rate=3e-5`, `lr_scheduler="linear"`, `warmup_ratio=0.05`, `weight_decay=0.01`, `max_grad_norm=0.3`, `optimizer="paged_adamw_8bit"`, `MAX_SEQ_LENGTH=4096`, `MAX_NEW_TOKENS=300`, `seed=3407`. La inferencia se realiza sobre los mismos 250 archivos del conjunto de test. Los tiempos son directamente el tiempo medio por archivo (el paradigma generativo no usa ensemble).
 
 Los **parámetros totales** corresponden al conteo del modelo base cargado en 4-bit (`sum(p.numel() for p in model.parameters())`). Los **parámetros entrenables** son los adaptadores LoRA añadidos sobre el modelo congelado.
 
