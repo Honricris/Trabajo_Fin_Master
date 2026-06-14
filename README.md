@@ -81,14 +81,16 @@ Como referencia adicional, `gpt-4.1-mini` (vía API de OpenAI, sin ningún ajust
 
 #### Proctemist (decoders)
 
-| Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | Tiempo medio/archivo (test) |
-|---|---|---|---:|---:|---:|---:|---:|---:|
-| Proctemist | `Ministral-3-8B-Instruct-2512_79_05_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.7839 | 0.7971 | 0.7905 | 48.23 s |
-| Proctemist | `Meta-Llama-3_1-8B-Instruct_78_22_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7858 | 0.7786 | 0.7822 | 15.28 s |
-| Proctemist | `BioMistral-7B-DARE_77_99_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7823 | 0.7775 | 0.7799 | 16.14 s |
-| Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7760 | 0.7700 | 0.7730 | 19.36 s |
-| Proctemist | `Mistral-7b-instruct-v0_3_77_17_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7514 | 0.7930 | 0.7717 | 17.68 s |
-| Proctemist | `salamandra-7b-instruct_75_47_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.7440 | 0.7656 | 0.7547 | 14.33 s |
+La columna `F1 0-shot` corresponde al mismo modelo evaluado sin entrenamiento (mismo formato de prompt e inferencia, sin QLoRA). `ΔF1` es la ganancia del ajuste fino con QLoRA respecto al baseline zero-shot.
+
+| Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | F1 0-shot | ΔF1 | Tiempo medio/archivo (test) |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Proctemist | `Ministral-3-8B-Instruct-2512_79_05_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.7839 | 0.7971 | 0.7905 | 0.4604 | +0.3301 | 48.23 s |
+| Proctemist | `Meta-Llama-3_1-8B-Instruct_78_22_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7858 | 0.7786 | 0.7822 | 0.2139 | +0.5683 | 15.28 s |
+| Proctemist | `BioMistral-7B-DARE_77_99_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7823 | 0.7775 | 0.7799 | 0.0481 | +0.7318 | 16.14 s |
+| Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7760 | 0.7700 | 0.7730 | 0.4145 | +0.3585 | 19.36 s |
+| Proctemist | `Mistral-7b-instruct-v0_3_77_17_.ipynb` | `mistralai/Mistral-7B-Instruct-v0.3` | 7.42B | 167.8M (2.26%) | 0.7514 | 0.7930 | 0.7717 | 0.3091 | +0.4626 | 17.68 s |
+| Proctemist | `salamandra-7b-instruct_75_47_.ipynb` | `BSC-LT/salamandra-7b-instruct` | 7.92B | 147.3M (1.86%) | 0.7440 | 0.7656 | 0.7547 | 0.1425 | +0.6122 | 14.33 s |
 
 ---
 
