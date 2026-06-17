@@ -102,7 +102,7 @@ La columna `F1 0-shot` corresponde al mismo modelo evaluado sin entrenamiento (m
 
 #### GPT-4.1-mini (OpenAI Fine-tuning API)
 
-Modelo propietario evaluado en **Distemist** en tres escenarios: zero-shot, 5-shot y ajuste fino supervisado vía la API de fine-tuning de OpenAI (sin LoRA; el ajuste fino lo gestiona íntegramente la plataforma de OpenAI). Modelo base: `gpt-4.1-mini-2025-04-14`, `epochs=2`, sin validation split (100 % de los datos de entrenamiento usados para train). Modelo fine-tuneado resultante: `ft:gpt-4.1-mini-2025-04-14:personal::DpOhbhTB`.
+Modelo propietario evaluado en **Distemist** en tres escenarios: zero-shot, 5-shot y ajuste fino supervisado vía la API de fine-tuning de OpenAI (sin LoRA; el ajuste fino lo gestiona íntegramente la plataforma de OpenAI). Modelo base: `gpt-4.1-mini-2025-04-14`, `epochs=2`, sin validation split (100 % de los datos de entrenamiento usados para train).
 
 Los parámetros totales y entrenables no se reportan al tratarse de un modelo de acceso cerrado vía API.
 
