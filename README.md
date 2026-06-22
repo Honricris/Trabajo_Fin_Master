@@ -91,7 +91,7 @@ Las columnas `F1 0-shot` y `F1 5-shot` corresponden al mismo modelo evaluado sin
 
 | Tarea | Notebook | Modelo base | Parámetros totales | Parámetros entrenables | Precision | Recall | F-score | F1 0-shot | F1 5-shot | ΔF1 | Tiempo medio/archivo (test) |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Proctemist | `Ministral-3-8B-Instruct-2512_79_05_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.7839 | 0.7971 | 0.7905 | 0.4604 | 0.4803 | +0.3102 | 48.23 s |
+| Proctemist | `Ministral-3-8B-Instruct-2512_79_33_.ipynb` | `unsloth/Ministral-3-8B-Instruct-2512` | 9.13B | 215.6M (2.36%) | 0.7853 | 0.8015 | 0.7933 | 0.4604 | 0.4803 | +0.3130 | 36.87 s |
 | Proctemist | `Meta-Llama-3_1-8B-Instruct_78_22_.ipynb` | `meta-llama/Meta-Llama-3.1-8B-Instruct` | 8.20B | 167.8M (2.05%) | 0.7858 | 0.7786 | 0.7822 | 0.2139 | 0.4139 | +0.3683 | 15.28 s |
 | Proctemist | `BioMistral-7B-DARE_77_99_.ipynb` | `BioMistral/BioMistral-7B-DARE` | 7.41B | 167.8M (2.26%) | 0.7823 | 0.7775 | 0.7799 | 0.0481 | 0.2702 | +0.5097 | 16.14 s |
 | Proctemist | `Qwen3-8B_77_30_.ipynb` | `Qwen/Qwen3-8B` | 8.37B | 174.6M (2.09%) | 0.7760 | 0.7700 | 0.7730 | 0.4145 | 0.3575 | +0.3585 | 19.36 s |
