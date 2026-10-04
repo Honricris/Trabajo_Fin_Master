@@ -64,6 +64,15 @@ Los tiempos de inferencia se calcularon sobre los 250 archivos del conjunto de t
 
 ---
 
+#### TSV de predicciones finales
+
+Los TSV finales de los encoders están organizados por tarea y usan el mismo nombre de modelo en ambas carpetas:
+
+- `Encoders/Distemist/predictions/` — menciones de enfermedad (`ENFERMEDAD`).
+- `Encoders/Proctemist/predictions/` — menciones de procedimientos (`PROCEDIMIENTO`).
+
+Cada carpeta contiene `bsc-bio-ehr-es.tsv`, `lcampillos.tsv`, `rigoberta-clinical.tsv`, `rigoberta.tsv` y `xlm-roberta.tsv`. El formato de columnas de cada tarea se conserva: Distemist (`filename`, `mark`, `label`, `off0`, `off1`, `span`) y Proctemist (`filename`, `ann_id`, `label`, `start_span`, `end_span`, `text`).
+
 ### Decoders
 
 #### Open-source (QLoRA / unsloth)
